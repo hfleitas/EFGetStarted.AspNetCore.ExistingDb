@@ -29,7 +29,11 @@ namespace EFGetStarted.AspNetCore.ExistingDb
         {
             services.AddMvc();
 
-            var connection = @"Server=localhost;Database=Blogging;Trusted_Connection=True;ConnectRetryCount=0";
+            //var connection = @"Server=localhost;Database=Blogging;Trusted_Connection=True;ConnectRetryCount=0";
+
+            //This is for ForceEncryption demo. https://github.com/hfleitas/Pixies.git
+            //Use this method if you have the SQL Alias and localhosts entry and TCP Proxy running, p-nat 10101 to 1433.
+            var connection = @"Data Source = Pixies10101,10101; Database = Blogging; Persist Security Info = True; User ID = core; Password = 'AspNetC0re.ExistingDb'; Pooling = False; MultipleActiveResultSets = False; Encrypt = False; TrustServerCertificate = True";
             services.AddDbContext<BloggingContext>(options => options.UseSqlServer(connection));
         }
 
