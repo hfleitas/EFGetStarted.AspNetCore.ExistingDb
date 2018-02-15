@@ -13,6 +13,8 @@ begin
 
 	dbcc checkident ('Blog', reseed, 7);  
 
+	update [Blog] set Url ='http://blogs.msdn.com/webdev' where BlogId = 2
+
 	select * from [Blog] ;
 	select * from [Post] ;
 

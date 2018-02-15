@@ -26,7 +26,11 @@ begin
 	insert into [Blog] (Url) values
 	('http://blogs.msdn.com/dotnet'),
 	('http://blogs.msdn.com/webdev'),
-	('http://blogs.msdn.com/visualstudio')
+	('http://blogs.msdn.com/visualstudio'),
+	('http://dba2o.wordpress.com'),
+	('http://blogs.microsoft.com/ai'),
+	('http://fleitasarts.com'),
+	('http://blogs.microsoft.com/ai')
 	;
 
 end
