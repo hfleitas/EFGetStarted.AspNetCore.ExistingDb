@@ -52,7 +52,7 @@ namespace EFGetStarted.AspNetCore.ExistingDb.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken] //Good Security
+        //[ValidateAntiForgeryToken] //Good Security
         public async Task<IActionResult> Create([Bind("BlogId,Url")] Blog blog)
         {
             if (ModelState.IsValid)
@@ -84,7 +84,7 @@ namespace EFGetStarted.AspNetCore.ExistingDb.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken] //Good Security
+        //[ValidateAntiForgeryToken] //Good Security
         public async Task<IActionResult> Edit(int id, [Bind("BlogId,Url")] Blog blog)
         {
             if (id != blog.BlogId)
@@ -135,7 +135,7 @@ namespace EFGetStarted.AspNetCore.ExistingDb.Controllers
 
         // POST: Blogs/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken] //Good Security
+        //[ValidateAntiForgeryToken] //Good Security
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var blog = await _context.Blog.SingleOrDefaultAsync(m => m.BlogId == id);
