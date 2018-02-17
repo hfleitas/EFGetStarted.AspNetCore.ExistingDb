@@ -20,3 +20,4 @@ begin
 
 end
 go
+select * from SQLSaturday.dbo.EventUpdate
