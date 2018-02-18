@@ -1,6 +1,6 @@
-﻿--  +----------------------------------------+
---  | create database, tables and load data. |
---  +----------------------------------------+
+﻿--  +-----------------------------------+
+--  | Reset Blogs Table after Load Test |
+--  +-----------------------------------+
 
 if db_id('Blogging') is not null
 begin 
@@ -20,4 +20,3 @@ begin
 
 end
 go
-select * from SQLSaturday.dbo.EventUpdate
